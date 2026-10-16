@@ -1,0 +1,12 @@
+<div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 space-y-4">
+  <h2 class="text-xl font-bold text-slate-800 border-b-2 border-indigo-500 pb-2 flex items-center gap-2">
+    🌐 Languages
+  </h2>
+
+  <ul class="space-y-2 text-sm text-slate-700">
+    <li *ngFor="let lang of languagesList" class="flex items-center gap-2">
+    	<span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+      <span class="font-medium">{{ lang.name }} | {{ lang.proficiency }}</span>
+    </li>
+  </ul>
+</div>
