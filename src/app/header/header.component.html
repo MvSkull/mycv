@@ -1,15 +1,30 @@
-<tr>
-	<td>
-		{{header.name}} <br>
-		{{header.goalLife}}
-	</td>
-	<td>
-		<img [src]="header.photoUrl" alt="Foto de perfil" class="w-24 h-24 rounded-full object-cover border-2 border-indigo-500">
-	</td>
-	<td>
-		{{header.email}}<br>
-		{{header.phoneNumber}}<br>
-		{{header.location}}<br>
-		{{header.socialNetwork}}
-	</td>
-<tr>
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 p-4">
+  
+  <!-- Columna Izquierda: Nombre y meta -->
+  <div class="text-center md:text-left space-y-2 flex-1">
+    <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-white">
+      {{header.name}}
+    </h2>
+    <p class="text-sm md:text-base text-slate-300">
+      "{{header.goalLife}}"
+    </p>
+  </div>
+
+  <!-- Columna Central: Foto de perfil desde Firebase -->
+  <div class="flex-shrink-0">
+    <img 
+      [src]="header.photoUrl" 
+      alt="Foto de perfil" 
+      class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover border-2 border-indigo-500 shadow-lg"
+    />
+  </div>
+
+  <!-- Columna Derecha: Datos de contacto -->
+  <div class="text-center md:text-right text-sm md:text-base space-y-1 text-slate-200 flex-1">
+    <p class="break-all">{{header.email}}</p>
+    <p>{{header.phoneNumber}}</p>
+    <p>{{header.location}}</p>
+    <p class="text-indigo-400 font-medium">{{header.socialNetwork}}</p>
+  </div>
+
+</div>
